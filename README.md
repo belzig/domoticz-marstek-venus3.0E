@@ -23,6 +23,25 @@ The Marstek Venus E 3.0 local API is notoriously prone to buffer overflows and c
 
 ---
 
+## 🚀 How to Install / Download
+
+Log into your Domoticz server (e.g., Raspberry Pi) via SSH and follow these steps to clone and install the files:
+
+### 1. Clone the Repository
+Navigate to your Domoticz plugins directory and clone this project:
+```bash
+cd /home/pi/domoticz/plugins/
+git clone https://github.com/belzig/domoticz-marstek-venus3.0E MarstekVenus
+```
+
+### 2. Copy and Set Up the Standalone Scripts
+The Python control scripts need to be located in the central Domoticz scripts directory. You can use the included shell script to copy them into the correct folder and set the execution flags automatically:
+```bash
+cd /home/pi/domoticz/plugins/MarstekVenus/
+chmod +x copy_venus_scripts.sh
+./copy_venus_scripts.sh
+```
+
 ## 🛠️ File System Structure
 
 For Domoticz to execute these scripts securely, please arrange them as follows on your Domoticz system:
@@ -64,15 +83,15 @@ To safely switch modes, create two Virtual Push Buttons in Domoticz to trigger t
 1. Go to **Setup -> Hardware** and click **Create Virtual Sensors** on your *Dummy* hardware.
 2. Create two switches: name them `Venus_Set_Manual` and `Venus_Set_Auto`.
 3. Go to the **Switches** tab, click **Edit** on each button and change the **Switch Type** to **Push On Button**.
-4. In the **On Action** field, enter the following system paths (replace `192.168.1.99` with your actual Venus IP):
+4. In the **On Action** field, enter the following system paths (replace `10.55.55.55` with your actual Venus IP):
 
 - **`Venus_Set_Manual` On-Action:**
   ```text
-  script://venus_set_manual.py 192.168.1.99
+  script://venus_set_manual.py 10.55.55.55
   ```
 - **`Venus_Set_Auto` On-Action:**
   ```text
-  script://venus_set_auto.py 192.168.1.99
+  script://venus_set_auto.py 10.55.55.55
   ```
 
 ---
