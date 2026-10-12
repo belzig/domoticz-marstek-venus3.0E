@@ -6,7 +6,7 @@
 
 -------- If you use the plugin or script, you accept this conditions. --------------
 
--------- If you do not accept this, you are entitled to use the plugin and the scripts ------------------
+-------- If you do not accept this, you are not entitled to use the plugin and the scripts ------------------
 
 
 # Domoticz Marstek Venus E 3.0 Integration
