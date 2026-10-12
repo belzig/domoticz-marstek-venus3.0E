@@ -1,3 +1,14 @@
+----- The Usage of this project is completely without any guarantee or support.
+
+------ YOU USE IT ON YOUR OWN RISK.
+
+------- I am not responsible for any damage the plugin or script causes ----------
+
+-------- If you use the plugin or script, you accept this conditions. --------------
+
+-------- If you do not accept this, you are entitled to use the plugin and the scripts ------------------
+
+
 # Domoticz Marstek Venus E 3.0 Integration
 
 A local, cloud-free integration for the **Marstek Venus E 3.0 (Firmware v3.0+)** energy storage system via its local JSON-RPC UDP API. This repository provides a Domoticz Python Plugin for continuous monitoring and a set of robust standalone Python scripts to control charging behavior without crashing the unstable Venus API.
